@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+    stages {
+        stage('git version') {
+            steps {
+                sh 'git --version'
+            }
+        }
+    }
+            stage('pull from rm') {
+            steps {
+                git credentialsId: 'gitcredentials', url: 'https://github.com/praveengitlab/demogit.git'
+            }
+        }
+    }
+    
