@@ -7,7 +7,7 @@ pipeline {
             }
         }
     }
-            stage('pull from rm') {
+        stage('pull from rm') {
             steps {
                 git credentialsId: 'gitcredentials', url: 'https://github.com/praveengitlab/demogit.git'
             }
